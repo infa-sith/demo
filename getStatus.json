@@ -1,0 +1,112 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "emw1.dm-em.informaticacloud.comactive-bpel",
+  "basePath" : "/services/tf",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "status" : {
+      "get" : {
+        "tags" : [ "getStatus" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "getStatus",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "runStatus",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/getStatus"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getStatus##subtaskDetails##details" : {
+      "properties" : {
+        "tasks" : {
+          "type" : "string"
+        }
+      }
+    },
+    "getStatus##subtaskDetails" : {
+      "properties" : {
+        "details" : {
+          "$ref" : "#/definitions/getStatus##subtaskDetails##details"
+        }
+      }
+    },
+    "getStatus" : {
+      "properties" : {
+        "assetName" : {
+          "type" : "string"
+        },
+        "assetType" : {
+          "type" : "string"
+        },
+        "duration" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "endTime" : {
+          "type" : "string"
+        },
+        "errorMessage" : {
+          "type" : "string"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "runId" : {
+          "type" : "number",
+          "format" : "int64"
+        },
+        "runtimeEnv" : {
+          "type" : "string"
+        },
+        "runtimeEnvName" : {
+          "type" : "string"
+        },
+        "startedBy" : {
+          "type" : "string"
+        },
+        "startTime" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "subtasks" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "subtaskDetails" : {
+          "$ref" : "#/definitions/getStatus##subtaskDetails"
+        }
+      }
+    }
+  }
+}
