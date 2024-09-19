@@ -9,7 +9,7 @@
     "license" : null
   },
   "host" : "emw1.dm-em.informaticacloud.com",
-  "basePath" : "/active-bpel/services/tf",
+  "basePath" : "/active-bpel/services/tf/",
   "schemes" : [ "https" ],
   "paths" : {
     "status" : {
