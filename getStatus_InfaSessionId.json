@@ -33,6 +33,12 @@
           "required" : false,
           "type" : "string"
         },{
+          "name" : "endTime",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        },{
           "name" : "rowLimit",
           "in" : "query",
           "description" : null,
