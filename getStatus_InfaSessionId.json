@@ -26,7 +26,19 @@
           "description" : null,
           "required" : false,
           "type" : "string"
-        }, {
+        },{
+          "name" : "startTime",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        },{
+          "name" : "rowLimit",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        },{
           "name" : "INFA-SESSION-ID",
           "in" : "header",
           "description" : null,
